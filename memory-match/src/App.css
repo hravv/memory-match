@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Kirang-Haerang;
+    src: url(./assets/fonts/KirangHaerang-Regular.ttf);
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Kirang-Haerang;
+}
+
+.heart-anim-enter {
+    transform: scale(0);
+    opacity: 0;
+}
+.heart-anim-enter-active {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 200ms;
+}
+.heart-anim-exit {
+    transform: scale(1);
+    opacity: 1;
+}
+.heart-anim-exit-active {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 200ms;
+}
