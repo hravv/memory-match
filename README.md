@@ -2,7 +2,7 @@
 
 A React-based card matching memory game.
 
-Live Demo: https://memory-match-xi.vercel.app/  
+Live Demo: https://memorymatch-game.vercel.app/  
 Frontend Repo: https://github.com/hravv/memory-match  
 
 ---
