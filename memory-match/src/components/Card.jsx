@@ -56,13 +56,13 @@ const Card = ({icon, id, flippedCards, selectedCards, resetSignal, setSelectedCa
 
   return (
     <>
-    <div className={clsx('rounded-sm flex justify-center items-center overflow-hidden', isFaceDown && 'cursor-pointer hover:scale-110 transition', difficulty === "hard" ? 'w-16 h-24 sm:w-16 sm:h-24' : 'w-16 h-24 sm:w-20 sm:h-30')}
+    <div className={clsx('rounded-sm flex justify-center items-center overflow-hidden', isFaceDown && 'cursor-pointer hover:scale-110 transition', difficulty === "normal" ? 'w-16 h-24 sm:w-20 sm:h-30 md:w-24 md:h-36 2xl:w-25 2xl:h-38 3xl:w-31! 3xl:h-47!' : 'w-16 h-24 sm:w-16 sm:h-24 md:w-22 md:h-33 2xl:w-25 2xl:h-38 3xl:w-31! 3xl:h-47! ')}
          onClick={()=> (!hasLost && !hasWon) && handleFlip(id)}
          onAnimationEnd={()=> setIsAnimating(false)}
     >
       <div className={clsx('card-inner bg-amber-100 relative w-full h-full', !isFaceDown && 'flipped')}>
         <div className='card-front h-full w-full flex items-center justify-center absolute top-0 left-0'>
-          <img src={iconMap[icon]} alt={icon} className={clsx(difficulty === "hard" ? 'w-11 h-11' : 'h-12 w-12 sm:w-14 sm:h-14')} />
+          <img src={iconMap[icon]} alt={icon} className={clsx(difficulty === "normal" ? 'h-12 w-12 sm:w-14 sm:h-14 md:h-15 md:w-15 2xl:w-16 2xl:h-16 3xl:w-19! 3xl:h-19!' : 'w-11 h-11 md:h-14 md:w-14 2xl:w-15 2xl:h-15 3xl:w-20! 3xl:h-20!')} />
         </div>
         <div className='card-back w-full h-full flex items-center justify-center absolute top-0 left-0'>
           <img src={pattern} alt="unflipped card" className='rounded-sm' />

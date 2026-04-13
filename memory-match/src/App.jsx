@@ -106,19 +106,19 @@ function App() {
   return (
     <div className='h-screen flex flex-col'>
       <header className='header w-full flex justify-center py-5 xl:py-15'>
-        <h1 className='text-[3rem] my-4 text-amber-100'>Memory Match!</h1>
+        <h1 className='text-[3rem] xl:text-[3.5rem] 3xl:text-[4rem]! my-4 text-amber-100'>Memory Match!</h1>
       </header>
 
-      <section className='main-content flex flex-col flex-1 lg:flex-row items-center justify-center lg:justify-around max-w-250 mx-auto'>
+      <section className='main-content flex flex-col flex-1 lg:flex-row items-center justify-center lg:justify-around max-w-250 2xl:max-w-350 mx-auto'>
         <div className='flex flex-col items-center lg:mr-18'>
-          <div className={clsx('lives-cont flex items-center justify-left mb-8 lg:mb-0 bg-yellow-900 py-2 px-3 rounded-lg', (difficulty === "normal" ? "w-64 sm:w-70" : "w-90 sm:w-100"))}>
-            <p className='text-amber-100 text-[1.5rem]'>Lives: </p>
+          <div className={clsx('lives-cont flex items-center justify-left mb-8 lg:mb-0 bg-yellow-900 py-2 px-3 rounded-lg', (difficulty === "normal" ? "w-64 sm:w-70 3xl:w-80!" : "w-90 sm:w-100 3xl:w-120!"))}>
+            <p className='text-amber-100 text-[1.5rem] 3xl:text-[1.8rem]!'>Lives: </p>
             
               <AnimatePresence>
               {Array.from({ length: lives}, (_, i) => {
                 return (
                     <motion.img 
-                      className='h-7 w-7 sm:h-8 sm:w-8 mx-1' 
+                      className='h-7 w-7 sm:h-8 sm:w-8 3xl:w-10! 3xl:h-10! mx-1' 
                       key={i} 
                       src={heart}
                       initial={{ scale:0, opacity:0 }}  
@@ -135,14 +135,14 @@ function App() {
             <p className='text-[1.9rem] text-amber-100 w-fit'>Difficulty</p>
             <div className='flex gap-5'>
               <button 
-                className={clsx('text-[1.3rem] bg-yellow-900 px-3 py-2 rounded-lg', difficulty === "normal" ? 'text-amber-200' : 'text-amber-100 cursor-pointer')}
+                className={clsx('text-[1.3rem] 3xl:text-[1.8rem]! bg-yellow-900 px-3 py-2 rounded-lg', difficulty === "normal" ? 'text-amber-200' : 'text-amber-100 cursor-pointer')}
                 onClick={()=> setDifficulty("normal")}
                 disabled={difficulty === "normal" || (hasWon || hasLost)}
                 >
                 Normal
               </button>
               <button 
-                className={clsx('text-[1.3rem] bg-yellow-900 px-3 py-2 rounded-lg', difficulty === "hard" ? 'text-amber-200' : 'text-amber-100 cursor-pointer')}
+                className={clsx('text-[1.3rem] 3xl:text-[1.8rem]! bg-yellow-900 px-3 py-2 rounded-lg', difficulty === "hard" ? 'text-amber-200' : 'text-amber-100 cursor-pointer')}
                 onClick={()=> setDifficulty("hard")}
                 disabled={difficulty === "hard" || (hasWon || hasLost)}
                 >
@@ -196,7 +196,7 @@ function App() {
       </section>
 
       <footer className='bottom-0 w-full flex justify-center items-center bg-lime-900'>
-        <p className='text-[1.1rem] text-amber-100 font-sans font-medium my-1'>Harvey Burman {new Date().getFullYear()}</p>
+        <p className='text-[1.1rem] 3xl:text-[1.3rem]! text-amber-100 font-sans font-medium my-1'>Harvey Burman {new Date().getFullYear()}</p>
       </footer>
     </div>
   )
